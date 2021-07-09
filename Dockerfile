@@ -2,10 +2,10 @@ FROM centos:latest
 RUN yum install -y httpd \
     zip \
     unzip
-ADD https://www.free-css.com/assets/files/free-css-templates/download/page265/shine.zip /var/www/html/
+ADD https://github.com/akashrwt7/btech/raw/master/srhu.zip /var/www/html/
 WORKDIR /var/www/html
-RUN unzip shine.zip
-RUN cp -rvf shine/* .
-RUN rm -rf shine shine.zip
+RUN unzip srhu.zip
+RUN cp -rvf srhu/* .
+RUN rm -rf srhu srhu.zip
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
